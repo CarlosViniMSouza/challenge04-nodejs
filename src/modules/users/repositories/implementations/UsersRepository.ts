@@ -49,7 +49,7 @@ class UsersRepository implements IUsersRepository {
     const user = receivedUser;
 
     user.admin = true;
-    user.created_at = new Date();
+    user.updated_at = new Date();
 
     return user;
   }
