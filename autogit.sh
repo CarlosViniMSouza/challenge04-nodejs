@@ -1,4 +1,4 @@
 git add -A
-git commit -m "3 tests receiving -> but I will finished"
+git commit -m "ok, lets deliver"
 git push -u origin main
 git status

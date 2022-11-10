@@ -10,15 +10,12 @@ class ListAllUsersUseCase {
 
   execute({ user_id }: IRequest): User[] {
     const user = this.usersRepository.findById(user_id);
-    const users = this.usersRepository.list();
 
-    if (user.admin != true) {
+    if (!user.admin) {
       throw new Error("User is not adm!");
     }
 
-    if (!user) {
-      throw new Error("User not Found!");
-    }
+    const users = this.usersRepository.list();
 
     return users;
   }
